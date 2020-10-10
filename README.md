@@ -15,12 +15,21 @@ npm install --save react-wavesurfer
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-wavesurfer'
-import 'react-wavesurfer/dist/index.css'
+import Waveform from 'react-wavesurfer'
 
 class Example extends Component {
+   state = {
+    isPlaying: false,
+  }
+
   render() {
-    return <MyComponent />
+    return (
+      <Waveform
+        height={64}
+        url='http://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'
+        isPlaying={isPlaying}
+      />
+    );
   }
 }
 ```
