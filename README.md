@@ -14,7 +14,6 @@ npm install --save react-wavesurfer
 
 ```jsx
 import React, { Component } from 'react'
-
 import Waveform from 'react-wavesurfer'
 
 class Example extends Component {
@@ -23,10 +22,11 @@ class Example extends Component {
   }
 
   render() {
+    const url = 'http://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3';
     return (
       <Waveform
         height={64}
-        url='http://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3'
+        url={url}
         isPlaying={isPlaying}
       />
     );
